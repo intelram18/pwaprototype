@@ -985,14 +985,15 @@
 
 <br>
 
-<!--Creates a Div for Map-->
-<div id="map" style="position: relative;z-index: 6;">
+<div id="map"
+	class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+	tabindex="0" style="position: relative;">
 	<!-- all the map controls -->
-	<div class="mapControlsContainer mapControls emap-search large-5 small-12 columns >
+	<div class="mapControlsContainer mapControls emap-search large-5 small-12 columns">
 		<div class="search-input">
-			<input class="emap-search-input js-emap-search-input" id="searchText" type="text" name="q" id="searchTxt"
-				aria-label="searchTxt" placeholder="Enter address or postal code..." title="Search">
-			<button id="searchButton" class="btn-emap-searchBtn" title="Search" onclick="CallTheme()">
+			<input class="emap-search-input js-emap-search-input" id="searchText" type="text" name="q"
+				aria-label="searchTxt" placeholder="Enter address or postal code..." title="Search" style="">
+			<button id="searchButton" class="btn-emap-searchBtn" title="Search" onclick="CallTheme()" style="">
 				<span class="visuallyhidden">Search</span>
 			</button>
 			<input type="hidden" name="searchVal" id="searchVal">
@@ -1000,16 +1001,15 @@
 			<input type="hidden" name="blk" id="blk">
 			<input type="hidden" name="streetNme" id="streetNme">
 			<!-- Locate my current location -->
-			<button id="locateButton" class="btn-emap-locate" title="Locate my current position"
-				onclick="getLocation()">
+			<button id="locateButton" class="btn-emap-locate" title="Locate my current position" onclick="getLocation()">
 				<span class="visuallyhidden">Location</span>
 			</button>
 		</div>
 	</div>
 	<div class="mapControls emap-search map-toggles">
-		<input type="image" src="images/houseIcon.png" onclick="" />
-		<input type="image" src="images/carParksIcon.png" onclick="showCarPark()" />
-		<input type="image" src="images/shopIcon.png" onclick="" />
+		<input type="image" src="images/houseIcon.png" onclick="" style="outline: none;">
+		<input type="image" src="images/carParksIcon.png" onclick="showCarPark()" style="">
+		<input type="image" src="images/shopIcon.png" onclick="">
 	</div>
 </div>
 
@@ -1139,7 +1139,7 @@
 
 </script>
 
-<script>
+<!-- <script>
 	if ('serviceWorker' in navigator) {
 		window.addEventListener('load', function () {
 			navigator.serviceWorker.register('/sw.js').then(function (registration) {
@@ -1152,7 +1152,7 @@
 		});
 	}
 
-</script>
+</script> -->
 
 <footer>
 	<div class="notif" style="display: block; background: rgb(224, 224, 224);">
